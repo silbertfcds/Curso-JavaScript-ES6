@@ -1,27 +1,42 @@
+// REST
+
 const usuario = {
-    nome: 'silbert',
-    idade: 23,
-    endereco: {
-        cidade: 'Parnamirim',
-        estado: 'RN',
-    },
+    nome:'silbert',
+    idade: 33,
+    empresa: 'Eu'
 };
 
-// const nome = usuario.nome;
-// const idade = usuario.idade;
-// const cidade = usuario.endereco.cidade;
+const {nome, ...resto} = usuario;
 
-// desestruturação
-// const {nome, idade, endereco: {cidade}} = usuario;
+console.log(nome);
+console.log(resto);
 
 
-// console.log(nome);
-// console.log(idade);
-// console.log(cidade);
+const arr = [1,2,3,4];
 
-//desestruturação
-function mostraNome({nome, idade}){
-    console.log(nome, idade);
+const [a,b,...c] = arr;
+
+console.log(arr);
+
+function soma (...params){
+    return params.reduce((total, next)=> total + next);
 }
 
-mostraNome(usuario);
+console.log(soma(1,2,3,4));
+
+// SPREAD
+
+const arr1 = [1,2,3];
+const arr2 = [4,5,6];
+
+const arr3 = [...arr1, ...arr2];
+
+console.log(arr3);
+
+const usuario1 = {
+    nome: 'eu',
+    idade: 12,
+};
+
+const usuario2 = {...usuario1, nome: 'joão'};
+console.log(usuario2);
