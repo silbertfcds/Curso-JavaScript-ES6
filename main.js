@@ -1,13 +1,7 @@
-const arr = [1, 3, 4, 5, 8, 9];
+// function soma (a = 3, b = 6){
+//     return a + b;
+// }
 
-// const newArr = arr.map(function(item){
-//     return item *2;
-// });
+const soma = (a=3, b=6)=> a+b;
 
-const newArr = arr.map(item => item * 2);
-
-console.log(newArr);
-
-const teste = () => ({ nome: 'silbert'});
-
-console.log(teste());
+console.log(soma(1));
