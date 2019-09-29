@@ -1,7 +1,27 @@
-// function soma (a = 3, b = 6){
-//     return a + b;
-// }
+const usuario = {
+    nome: 'silbert',
+    idade: 23,
+    endereco: {
+        cidade: 'Parnamirim',
+        estado: 'RN',
+    },
+};
 
-const soma = (a=3, b=6)=> a+b;
+// const nome = usuario.nome;
+// const idade = usuario.idade;
+// const cidade = usuario.endereco.cidade;
 
-console.log(soma(1));
+// desestruturação
+// const {nome, idade, endereco: {cidade}} = usuario;
+
+
+// console.log(nome);
+// console.log(idade);
+// console.log(cidade);
+
+//desestruturação
+function mostraNome({nome, idade}){
+    console.log(nome, idade);
+}
+
+mostraNome(usuario);
